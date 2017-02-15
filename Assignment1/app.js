@@ -10,6 +10,7 @@
 		$scope.message = "(Please enter comma separated values)";
 		$scope.image = "defaultFood";
 		$scope.buttonState = "primary";
+		$scope.message_color = "blue";
 		$scope.processEatenItems = function() {
 			if($scope.eatenItems.length == 0) {
 				$scope.eatenItemsList = [];
@@ -21,22 +22,26 @@
 				$scope.message = "Please enter data first !!!";
 				$scope.image = "enterDataFirst";
 				$scope.buttonState = "danger";
-
+				$scope.message_color = "red";
+				/* Removing timeut to adhere to assignment requirements
 				setTimeout(function() {
 					$scope.image = "defaultFood";
 					$scope.message = "(Please enter comma separated values)";
 					$scope.buttonState = "primary";
+					$scope.message_color = "blue";
 					$scope.$apply();
-				}, 900);
+				}, 900); */
 			} else if($scope.eatenItemsList.length <= 3) {
 				$scope.message = "Enjoy!";
 				$scope.image = "enjoyEating";
 				$scope.buttonState = "success";
+				$scope.message_color = "green";
 
 			} else {
 				$scope.message = "Too much!";
 				$scope.image = "tooMuch";
 				$scope.buttonState = "success";
+				$scope.message_color = "green";
 			}
 		}
 	};

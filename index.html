@@ -18,17 +18,27 @@
 	    opacity: 0.5;
 	    z-index: -10;
 	} 
+	.green {
+		border-color: greenyellow;
+	}
+	.red {
+		border-color: red;
+	}
+	.blue {
+		border-color: blue;
+	}
     </style>
 	<title>Lunch Checker</title>
 </head>
 <body ng-controller="LunchCheckerAppController" class="container-fluid">
 	<img ng-src="Assignment1/{{image}}.gif">
 	<h1>Lunch checker</h1>
+	<p><b>I do NOT consider an empty item, i.e. ", , ," as an item towards the count.</b></p>
 	<br>
 	<br>
 	<div class="input-group">
       <span class="input-group-addon">Enter what you ate</span>
-      <input id="msg" type="text" class="form-control" placeholder="I ate ..." ng-model="eatenItems">
+      <input id="msg" type="text" class="form-control" placeholder="I ate ..." ng-model="eatenItems" ng-class="message_color">
     </div>
     <br>
 	<button ng-click="processEatenItems()" type="button" class="btn btn-{{buttonState}}">Check If Too Much</button>
@@ -36,7 +46,7 @@
 	<ul ng-repeat="item in eatenItemsList">
 		<li>{{item}}</li>
 	</ul>
-	<p>{{message}} </p>
+	<p><font size = "12" color={{message_color}}>{{message}}</font></p>
 
 </body>
 </html>
