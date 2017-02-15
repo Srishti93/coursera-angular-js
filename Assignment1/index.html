@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheckerApp">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<style>
+	img {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    opacity: 0.5;
+	    z-index: -10;
+	} 
+    </style>
+	<title>Lunch Checker</title>
+</head>
+<body ng-controller="LunchCheckerAppController" class="container-fluid">
+	<img ng-src="{{image}}.gif">
+	<h1>Lunch checker</h1>
+	<br>
+	<br>
+	<div class="input-group">
+      <span class="input-group-addon">Enter what you ate</span>
+      <input id="msg" type="text" class="form-control" placeholder="I ate ..." ng-model="eatenItems">
+    </div>
+    <br>
+	<button ng-click="processEatenItems()" type="button" class="btn btn-{{buttonState}}">Check If Too Much</button>
+	<p ng-if="eatenItemsList.length > 0">Items you said you ate:</p>
+	<ul ng-repeat="item in eatenItemsList">
+		<li>{{item}}</li>
+	</ul>
+	<p>{{message}} </p>
+
+</body>
+</html>

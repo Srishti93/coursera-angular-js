@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<title>Dependency Injection</title>
+</head>
+<body ng-app="DepInj">
+	<div ng-controller="DepInjController">
+		<h1>Dependency Injection</h1>
+		<input type="text" 
+			   ng-model="name"
+			   ng-blur="upper();"> <!--ng-blur is when the input box goes out of focus-->
+	</div>
+</body>
+</html>

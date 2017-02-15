@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="InterpolationApp">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<title>Expressions and Interpolation</title>
+</head>
+<body ng-controller="InterpolationAppController">
+	<h1>Welcome to the InterpolationApp</h1>
+	<p><b>Hello. There is a message for you from {{name}}:</b></p>
+	<p>{{displayMessage()}}</p>
+	<p><i>This error wont display "xyz" is not defined: {{xyz}}</p>
+	<p>This error wont display "age" is null: {{age}}</i></p>
+
+
+	<h1>Hungry App - Part 2 of the lecture</h1>
+	<img ng-src="images/srishti_{{state}}.jpeg"> <br>
+	<!-- <img src="images/srishti_{{state}}.jpeg"> - We will see a 404 error becasue HTML is processed sequentially and during intial processing this src is bogus. Solution use ng-src-->
+	<p>{{name}} is {{state}}</p>
+	<button ng-click = "feedSrishti()">Feed Srishti</button>
+
+</body>
+</html>

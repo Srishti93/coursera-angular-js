@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<title>Name Calculator App</title>
+	</head>
+	<body ng-app="nameCalculator">
+	<h1>Name Calculator - See MVVM come alive</h1>
+		<div ng-controller="nameCalculatorController">
+			Enter your name
+			<input type="text" 
+			ng-model="name" 
+			ng-keyup="displayValue();">
+			<div>{{name}}</div>
+			<!-- My implementation
+			<div>Total numeric value of person's name is: {{getNumericValue(name)}}</div>
+			-->
+
+			<!--Implementing Yaakov's design -->
+			<div>Total numeric value of person's name is: {{value}}</div>
+
+		</div>
+	</body>
+</html>
+

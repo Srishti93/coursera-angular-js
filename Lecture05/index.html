@@ -1,0 +1,20 @@
+<!DOCTYPE html >
+	<html ng-app="myFirstApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<title>My First Angular Program</title>
+	</head>
+	<body>
+	<h1>Sharing data with view</h1>
+		<div ng-controller="myFirstController">
+
+			<input type="text" ng-model="name">
+			<div>In small: {{name}}</div>
+			<div>In capital: {{toBold(name)}}</div>
+
+		</div>
+	</body>
+</html>
+
